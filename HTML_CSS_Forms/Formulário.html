@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Registro de pagamento</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
     <header class="cabecalho">
         <h1>Comprovante de Pagamento Instituto Bíblico IBH</h1>
-        <h2>Esse formulário é uma ferramenta para auxiliar no controle de pagamento das mensalidades do nosso curso.</h2>
-        <br>
+        <p> <em>Esse formulário é uma ferramenta para auxiliar no controle de pagamento das mensalidades do nosso curso.</em></p>
     </header>
-    <form action="" method="GET"  enctype="multipart/form-data" class="dados-usuario">
+    <form action="" method="GET"  enctype="multipart/form-data" class="speaker-form">
         <fieldset>
-            <div>
-                <label class="nome">Nome Completo</label>
-                <input type="text" name="nome" id="nome"> 
+            <div class="form-row">
+            <div class="line-content">
+                <label for="full-name">Nome Completo</label>
+                <input type="text" name="nome" id="full-name" required> 
             </div>
             <br>
-            <div>
+            <div class="line-content">
                 <p>Nos diga aqui qual o mês e o ano de referência do pagamento que realizou:</p>
+                <br>
                 <label>Mês/Ano</label>
-                <input type="text" name="mês" id="mês"> 
+                <input type="text" name="mês"> 
             </div>
-            <br>
-            <select name="Curso" id="curso">
-              <option value="básico">Selecione o curso</option>
-              <option value="básico">Curso Básico de Teologia</option>
-              <option value="historia">Curso de História da Igreja</option>
-            </select>
-            <br>
-            <br>
-            <label>E-mail</label>
-            <input type="text" name="email" id="email">
+            <div>
+                <select name="curso" id="curso">
+                    <option value="básico">Selecione o curso</option>
+                    <option value="básico">Curso Básico de Teologia</option>
+                    <option value="historia">Curso de História da Igreja</option>
+                </select>
+                <br>
+                <br>
+                <label id="email">E-mail</label>
+                <input type="text" name="email" id="email">
+            </div>
         </fieldset>
         <br>
-        <div>
+        <fieldset>
+        <div class="pagamento">
             <p>Adicione o comprovante de pagamento</p>
+            <br>
             <Input type="file" name="comprovante" id="comprovante"></Input>
             <br>
             <button type="submit" id="botao">Enviar</button>
         </div>
-    </form>
-    
-</body>
+        </fieldset>
+    </form> 
+  </body>
 </html>
