@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Registro de pagamento</title>
 </head>
 <body>
-    <div>
-        <h1>Protótiṕo de Cadastro</h1>
-        <p>Complete com suas informações</p>
+    <header class="cabecalho">
+        <h1>Comprovante de Pagamento Instituto Bíblico IBH</h1>
+        <h2>Esse formulário é uma ferramenta para auxiliar no controle de pagamento das mensalidades do nosso curso.</h2>
         <br>
-    </div>
-    <form>
+    </header>
+    <form action="" method="GET"  enctype="multipart/form-data" class="dados-usuario">
         <fieldset>
             <div>
-                <label>Nome</label>
+                <label class="nome">Nome Completo</label>
                 <input type="text" name="nome" id="nome"> 
             </div>
+            <br>
             <div>
-                <label>Sobrenome</label>
-                <input type="text" name="sobrenome" id="sobrenome">
+                <p>Nos diga aqui qual o mês e o ano de referência do pagamento que realizou:</p>
+                <label>Mês/Ano</label>
+                <input type="text" name="mês" id="mês"> 
             </div>
-        </fieldset>
-
-        <div>
-            <label>Email</label>
+            <br>
+            <select name="Curso" id="curso">
+              <option value="básico">Selecione o curso</option>
+              <option value="básico">Curso Básico de Teologia</option>
+              <option value="historia">Curso de História da Igreja</option>
+            </select>
+            <br>
+            <br>
+            <label>E-mail</label>
             <input type="text" name="email" id="email">
-        </div>
-
+        </fieldset>
+        <br>
         <div>
-            <label>De qual lado da aplicação você desenvolve?</label>
-            <label>
-                <input type="radio" name="devWeb" value="Frontend">Front-end</label>
+            <p>Adicione o comprovante de pagamento</p>
+            <Input type="file" name="comprovante" id="comprovante"></Input>
+            <br>
+            <button type="submit" id="botao">Enviar</button>
         </div>
     </form>
     
